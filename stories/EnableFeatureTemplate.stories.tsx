@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Box, Flex, Text, Heading, Container } from "@chakra-ui/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const EnableFeatureTemplate = ({
   children,
@@ -51,9 +52,9 @@ const EnableFeatureTemplate = ({
       </div>
 
       {/* 
-            There are two different sets of buttons because <Button /> does not allow for responsive sizes 
-            Desktop version:
-          */}
+        There are two different sets of buttons because <Button /> does not allow for responsive sizes 
+        Desktop version:
+      */}
       <Flex
         display={["none", "flex"]}
         justifyContent="center"
@@ -62,12 +63,7 @@ const EnableFeatureTemplate = ({
         flexDirection="row-reverse"
       >
         <Button size="sm" children="Button" />
-        <Button
-          colorScheme="gainsboro"
-          variant="outline"
-          size="sm"
-          children="button"
-        />
+        <Button variant="outline" size="sm" children="button" id="desktop1" />
       </Flex>
 
       {/* Mobile version: */}
@@ -79,7 +75,7 @@ const EnableFeatureTemplate = ({
         flexDirection="column"
       >
         <Button children="Button" />
-        <Button colorScheme="gainsboro" variant="outline" children="button" />
+        <Button variant="outline" children="button" id="mobile1" />
       </Flex>
     </Container>
   );
@@ -89,8 +85,13 @@ const meta = {
   title: "Enable feature",
   args: {},
   component: EnableFeatureTemplate,
-};
+} as Meta<typeof EnableFeatureTemplate>;
+
+type Story = StoryObj<typeof meta>;
 
 export default meta;
 
-export const Story = {};
+export const Default: Story = {};
+export const Hover: Story = {
+  parameters: { pseudo: { hover: ["#mobile1", "#desktop1"] } },
+};

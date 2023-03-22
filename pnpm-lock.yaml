@@ -54,7 +54,7 @@ devDependencies:
   '@vitejs/plugin-react': 3.1.0_vite@4.1.4
   prop-types: 15.8.1
   storybook: 7.0.0-beta.62
-  storybook-addon-pseudo-states: 2.0.0-next.0_avpttoenxvar5v6qkjbr6linii
+  storybook-addon-pseudo-states: link:../storybook-addon-pseudo-states
   typescript: 4.9.5
   vite: 4.1.4
 
@@ -7792,31 +7792,6 @@ packages:
 
   /store2/2.14.2:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
-    dev: true
-
-  /storybook-addon-pseudo-states/2.0.0-next.0_avpttoenxvar5v6qkjbr6linii:
-    resolution: {integrity: sha512-KvM8FUTsHm+plP2OkgHDE65a8p7c8Dp6H9zvV7RZ38uIJHm8hJ2NZplNLqLv20i/mK6zSq7p6uU98izF/L4UXw==}
-    peerDependencies:
-      '@storybook/components': next
-      '@storybook/core-events': next
-      '@storybook/manager-api': next
-      '@storybook/preview-api': next
-      '@storybook/theming': next
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/components': 7.0.0-rc.1_biqbaboplfbrettd7655fr4n2y
-      '@storybook/core-events': 7.0.0-rc.1
-      '@storybook/manager-api': 7.0.0-rc.1_biqbaboplfbrettd7655fr4n2y
-      '@storybook/preview-api': 7.0.0-rc.1
-      '@storybook/theming': 7.0.0-rc.1_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: true
 
   /storybook/7.0.0-beta.62:
